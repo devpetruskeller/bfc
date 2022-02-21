@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.containerforApp {
+    background: #ABEBC6;
+}
+
+/* body { 
+    margin: 0px;
+    padding: 10px; 
+} */
+
+ul{
+	list-style: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.employee {
+    background-color: #298d9e;	
+    width: 350px;
+ }
+ .message {
+    background-color: #EEF4F5;	
+    width: 350px;
+ }
+
+ .dropdown {
+    background: #ABEBC6;
+    border: none
+ }

@@ -1,0 +1,61 @@
+
+
+<div class="containerforApp">
+  <div>
+    <div>
+      <img src="assets/img/header_1170.jpg" alt="bible-story-kids">
+    </div>
+
+    <form #languageForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+      <!-- Interpolation -->
+      <!-- {{ languageForm.value | json}}
+      <hr/>
+      {{ languageModel | json}} -->
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <td style="vertical-align: middle">Languages</td>
+            <td style="text-align: right">
+              <!-- <div>
+                <img src="assets/img/language_icon.jpg" alt="language-icon">
+              </div> -->
+            
+              <div>
+                <select 
+                  class="custom-select dropdown" 
+                  name="languagesList" 
+                  [(ngModel)]="languageModel.englishLanguage"
+                  (ngModelChange)="modelChangell()"
+                  style="text-align: right; color: blue">
+                  <option value="">English</option>
+                  <option style="color: red;" *ngFor="let ll of LanguageList">
+                    {{ll}}
+                  </option>
+                </select>
+              </div>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </form>  
+    
+    <div class="containerforApp" *ngIf="languageModel.englishLanguage === 'English - English'">
+      <ngx-extended-pdf-viewer
+        [src]="'assets/pdf/88_English_Bible_Stories.pdf'"
+        [height]="'90vh'"
+        [useBrowserLocale]="true"
+        [textLayer]="true"
+        [showHandToolButton]="true"
+        [showPresentationModeButton]="true"
+        [(page)]="page"
+        [(pageLabel)]="pageLabel"
+        [showDownloadButton]="false"
+      ></ngx-extended-pdf-viewer>
+    </div>
+
+  </div>
+</div>

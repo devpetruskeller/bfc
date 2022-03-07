@@ -40,6 +40,7 @@ testem.log
 .config
 .history
 .vscode/*
+.archive
 
 # System files
 .DS_Store
